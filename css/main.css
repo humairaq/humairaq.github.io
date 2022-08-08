@@ -580,3 +580,19 @@ display:grid;
   color: var(--title-color);
 }
 
+.help {
+  display: none;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0.2em 0 1em 0;
+  color: #c00;
+}
+
+.invalid .help {
+  display: block;
+}
+
+.invalid label, .invalid input {
+  color: #c00;
+  border-color: #c00;
+}

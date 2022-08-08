@@ -1,51 +1,128 @@
+// validate contact form
+// custom form validation
+class FormValidate {
 
-// Document is ready
-$(document).ready(function (){
-    $("#contact-name-error").hide();
-    let nameError = true;
-    $("#name").keyup(function(){
-        validateName();
-    });
+    constructor(form, field) {
 
-    function validateName(){
-        let nameValue = $("#name").val();
-        if(nameValue.length === ""){
-            $("#contact-name-error").show();
-            nameError = false;
-            return false;
-        } else{
-            $("#contact-name-error").hide();
-        }
+        // active form
+        this.form = form;
+        this.form.noValidate = true;
+
+        // custom validation functions
+        this.custom = [];
+
+        // validate fields on focus change?
+        this.validate = !!field;
+
+        // field focusout event
+        this.form.addEventListener('focusout', e => this.changeHandler(e) );
+
+        // form submit event
+        this.form.addEventListener('submit', e => this.submitHandler(e) );
+
     }
 
-    $("#contact-email-error").hide();
-    let emailError = true;
-    $("#email").keyup(function(){
-        validateEmail();
-    });
-    function validateEmail() {
-        const email = document.getElementById("email");
-        email.addEventListener("blur", () => {
-            let regex =  /^([a-zA-Z\d_.+-])+\@(([a-zA-Z\d-])+\.)+([a-zA-Z\d]{2,4})+$/;
-            let s = email.value;
-            if (regex.test(s)) {
-                email.classList.remove("is-invalid");
-                emailError = true;
+
+    // add a custom validation function
+    // it's passed the field and must return true (valid) or false (invalid)
+    addCustom(field, vfunc) {
+
+        // get index
+        let c = field.CustomValidator;
+        if (typeof c === 'undefined') {
+            c = this.custom.length;
+            field.CustomValidator = c;
+        }
+
+        // store function reference
+        this.custom[c] = (this.custom[c] || []).concat(vfunc);
+
+    }
+
+
+    // validate a field when focus changes
+    changeHandler(e) {
+
+        const t = e.target;
+        if (this.validate && t && t.checkValidity) this.validateField(t);
+
+    }
+
+
+    // validate all fields on submit
+    submitHandler(e) {
+
+        // validate all fields
+        let first, invCount = 0;
+        Array.from(this.form.elements).forEach(f => {
+
+            if (!this.validateField(f)) {
+
+                // find first visible invalid
+                if (f.offsetHeight) first = first || (f.focus && f);
+                invCount++;
+
             }
-            else {
-                email.classList.add("is-invalid");
-                emailError = false;
-            }
+
         });
+
+        // at least one field is invalid
+        if (invCount) {
+
+            // stop submission
+            e.stopImmediatePropagation();
+            e.preventDefault();
+
+            // enable field focusout validation
+            this.validate = true;
+
+            // focus first invalid field
+            if (first) {
+                first.parentElement.scrollIntoView(true);
+                setTimeout(() => first.focus(), 800);
+            }
+
+        }
+        // form is valid - submit
+        else if (this.submit) this.submit(e);
+
     }
 
-    $("#submit").click(function(){
-        validateName();
-        validateEmail();
-        if(nameError === true && emailError === true){
-            return true
-        } else{
-            return false;
+
+    // validate a field
+    validateField(field) {
+
+        const
+            parent = field.parentElement,
+            c = field.CustomValidator,
+            inv = 'invalid';
+
+        field.setCustomValidity('');
+
+        // default validation
+        let valid = field.checkValidity();
+
+        // custom validation
+        if (valid && typeof c !== 'undefined') {
+            valid = !this.custom[c].some(fn => !fn(field));
         }
-    });
-});
+
+        if (valid) {
+
+            // field is valid
+            parent.classList.remove(inv);
+            return true;
+
+        }
+        else {
+
+            // field is not valid
+            field.setCustomValidity(inv);
+            parent.classList.add(inv);
+            return false;
+
+        }
+
+    }
+
+}
