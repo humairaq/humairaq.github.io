@@ -1,1 +1,336 @@
-"Hello World" 
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="Humaira Qadeer Project Portfolio" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Humaira Qadeer Portfolio</title>
+
+  <!-- css -->
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+  <!--jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="../js/main.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<!-- Header -->
+<header class="header" id="header">
+<nav class="nav container">
+  <a class="nav-logo" href="#">Humaira Qadeer</a>
+  <div class="nav-menu" id="nav-menu">
+    <ul class="nav-list grid">
+      <li class="nav-item">
+        <a class="nav-link" href="#home">
+          <i class="uil uil-estate nav-icon"></i>Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">
+          <i class="uil uil-user nav-icon"></i>About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">
+          <i class="uil uil-keyboard nav-icon"></i> Projects
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">
+          <i class="uil uil-message nav-icon"></i> Contact Me
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+
+      <div class="nav-toggle" id="nav-toggle">
+        <i class="uil uil-bars" onclick="nav_close()"></i>
+      </div>
+
+
+
+</nav>
+</header>
+
+<!-- Main -->
+<main class="main">
+  <!--Home -->
+  <section class="home section" id="home">
+    <div class="home-container container grid">
+      <div class="home-content grid">
+        <div class="home-social">
+          <a class="home-social-icon" href="https://www.linkedin.com/in/humairaqadeer" target="_blank">
+            <i class="uil uil-linkedin"></i>
+          </a>
+          <a class="home-social-icon" href="https://github.com/humairaq" target="_black">
+            <i class="uil uil-github"></i>
+          </a>
+          <a class="home-social-icon" href="mailto:humairafqadeer@gmail.com" target="_blank">
+            <i class="uil uil-envelope-alt"></i>
+          </a>
+        </div>
+
+
+
+    <div class="home-caption">
+      <h1 class="home-title">Hi, I'm Humaira</h1>
+      <!-- add transitional sub-->
+      <p class="home-description">
+      </p>
+    </div>
+      </div>
+    </div>
+
+
+  </section>
+<hr>
+  <!--About -->
+  <section class="about section" id="about">
+    <h2 class="section-title"> About Me </h2>
+    <span class="section-subtitle">Allow Me to Introduce Myself</span>
+    <div class="about-container container grid">
+      <img id="about-img" src="../images/studying.png"/>
+
+      <div class="about-desc">
+        <p class="p-about-desc">
+          I'm a Computer Science student, at Queens College.
+          I enjoy developing websites, machine learning, and working with data.
+        </p>
+        <br>
+        <div class="about-resume">
+          <h3>Take a look at my resume!</h3>
+          <a class="button" href="../html/ResumeHumairaQadeer.html" target="_blank">
+            View Resume <!-- iclass-->
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<hr>
+  <!--Projects -->
+  <section class="projects section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <span class="section-subtitle"><i>(Click on the images for project descriptions)</i></span>
+    <div class="project-container container">
+      <div class="project-content grid">
+
+        <div class="image-container" id="project-1" onclick="image_toggle('#project-1','#project-1-content')">
+          <img alt="NYC Travel Website" src="../images/project-1.png"/>
+          <div class="image-header">
+            <h3 class="project-title">NYC Tourism Website <a
+                    href="https://humairaq.github.io/SWE-Project-1/" target="_blank">
+              <i class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-1-content">
+            <p class="project-desc">NYC Tourism Website<br>Showcasing NYC attractions and booking
+              features.<br> <b>HTML | CSS |Javascript </b></p>
+
+          </div>
+        </div>
+
+        <div class="image-container" id="project-2" onclick="image_toggle('#project-2','#project-2-content')">
+          <img alt="Dream Diary" src="../images/Midterm-Project.png"/>
+          <div class="image-header">
+            <h3 class="project-title">Dream Journal Website <a
+                    href="https://humairaq.github.io/SWE-Midterm-Project/" target="_blank"> <i
+                    class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-2-content">
+            <p class="project-desc">Dream Journaling Website <br>Features local storage functionality
+              using javascript to keep track of dreams on a daily basis.<br> <b>HTML | CSS |
+                Javascript</b></p>
+
+          </div>
+        </div>
+
+        <div class="image-container" id="project-3" onclick="image_toggle('#project-3','#project-3-content')">
+          <img alt="Random Number Game" src="../images/brython-game.png"/>
+          <div class="image-header">
+            <h3 class="project-title">Random Number Guessing Game <a
+                    href="https://humairaq.github.io/SWE-Midterm-Project/" target="_blank"> <i
+                    class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-3-content">
+            <p class="project-desc">Online Game created with Brython <br> where a random number is generated
+              and player is given 7 chances to guess the number <br> <b>HTML | CSS | Brython </b></p>
+          </div>
+        </div>
+      </div>
+      <div class="more-projects grid">
+        <div class="image-container" id="project-4"
+             onclick="image_toggle('#project-4','#project-4-content')">
+          <img alt="Group Project" src="../images/group-project.png"/>
+          <div class="image-header">
+            <h3 class="project-title">Group Project Website <a
+                    href="https://cssgrouphackathon-qcc2022edlc2w4-4.qcc2022edlc2w4.repl.co/"
+                    target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-4-content">
+            <p class="project-desc">Clothing Store Website <br> Features transitional slideshow of
+              ambassadors, dropdown menus, login and registration, and contact form <br> <b> HTML |
+                CSS | Javascript</b></p>
+          </div>
+        </div>
+
+        <div class="image-container" id="project-5"
+             onclick="image_toggle('#project-5','#project-5-content')">
+          <img alt="P5 Animation" src="../images/p5-animation-img.png"/>
+          <div class="image-header">
+            <h3 class="project-title">P5 Animation PSA Website <a
+                    href="https://P5-Animation-9popopop9.qcc2022edlc2w4.repl.co" target="_blank"> <i
+                    class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-5-content">
+            <p class="project-desc">Public Service Announcement <br> For severe weather conditions <b>
+              HTML | CSS | JS | AJAX </b></p>
+          </div>
+        </div>
+
+        <div class="image-container" id="project-6"
+             onclick="image_toggle('#project-6','#project-6-content')">
+          <img alt="Strawberry Milkshake" src="../images/strawberry-milkshake-recipe.png"/>
+          <div class="image-header">
+            <h3 class="project-title">Strawberry Milkshake Recipe Website<a
+                    href="https://Learners-Make-a-Recipe-9popopop9.qcc2022edlc2w4.repl.co"
+                    target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-6-content">
+            <p class="project-desc"> Recipe Website <br> Features wireframe design to display recipe
+              using images, headings, paragraphs, unordered, and ordered lists <br> <b> HTML |
+                CSS </b>
+            </p>
+          </div>
+        </div>
+
+        <div class="image-container" id="project-7"
+             onclick="image_toggle('#project-7','#project-7-content')">
+          <img alt="Ajax Api" src="../images/api-ajax.png"/>
+          <div class="image-header">
+            <h3 class="project-title">API, JSON, Ajax Practice Website <a
+                    href="https://Practice-API-Jason-Ajax-9popopop9.qcc2022edlc2w4.repl.co"
+                    target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-7-content">
+            <p class="project-desc">Features implementation of apis, fetching text files asynchronously,
+              and Ajax requests for JSON data <br> <b> HTML | CSS | AJAX | JSON | JS</b></p>
+          </div>
+        </div>
+
+        <div class="image-container" id="project-8"
+             onclick="image_toggle('#project-8','#project-8-content')">
+          <img alt="Jquery Traversal" src="../images/jquery-traversal.png"/>
+          <div class="image-header">
+            <h3 class="project-title">JQuery Traversal <a
+                    href="https://jQuery-Traversing-9popopop9.qcc2022edlc2w4.repl.co" target="_blank">
+              <i class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-8-content">
+            <p class="project-desc">JQuery Traversal Website <br> Features use of JQuery to manipulate
+              CSS and implement several animations | HTML | CSS | JQuery
+            </p>
+          </div>
+        </div>
+
+        <div class="image-container" id="project-9"
+             onclick="image_toggle('#project-9','#project-9-content')">
+          <img alt="responsive web design" src="../images/lab-13-css.png"/>
+          <div class="image-header">
+            <h3 class="project-title">Responsive Web Design - Simple <a
+                    href="https://lab13-9popopop9.qcc2022edlc2w4.repl.co/" target="_blank"> <i
+                    class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+          <div class="image-content" id="project-9-content">
+            <p class="project-desc">6.Responsive Web Design implementation <br> Utilized media queries
+              to allow the browser to resize elements on webpages based on window size <br> <b> HTML |
+                CSS </b>
+            </p>
+          </div>
+        </div>
+
+        <div class="image-container" id="project-10"
+             onclick="image_toggle('#project-10','#project-10-content')">
+          <img alt="Responsive web form" src="../images/Responsive-web-form.png"/>
+
+          <div class="image-header">
+            <h3 class="project-title">CSS Image Sprites and Forms <a
+                    href="https://Lab-14-CSS-Image-Sprites-and-Forms-9popopop9.qcc2022edlc2w4.repl.co"
+                    target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+          </div>
+
+          <div class="image-content" id="project-10-content">
+            <p class="project-desc">Implemented responsive form using CSS <br> Utilzing media queries
+              <br> <b> HTML | CSS </b>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="see-more-button">
+        <a class="button" id="see-more" onclick="see_more_projects()">view all</a>
+      </div>
+    </div>
+
+  </section>
+
+<hr>
+  <!--Contact -->
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <span class="section-subtitle">Lets chat!</span>
+    <div class="contact_container container grid">
+     <form id="contact_form" action="" method="get" class="contact-form grid">
+       <div class="contact-inputs grid">
+         <div class="contact-content">
+           <label for="name" class="contact-label">Name</label>
+           <input class="contact-input" type="text" id="name" required>
+         </div>
+         <div class="contact-content">
+           <label for="email" class="contact-label">Email</label>
+           <input class="contact-input" type="email" id="email" required>
+         </div>
+         <div class="contact-content">
+           <label for="contact-phone" class="contact-label">Phone</label>
+           <input class="contact-input"  type="tel" id="contact-phone" required>
+         </div>
+         <div class="contact-content">
+           <label for="contact-message" class="contact-label">Message</label>
+           <textarea class="contact-input" id="contact-message" row="07" required> </textarea>
+
+         </div>
+         <div id="contact-content">
+           <input class="button" type="submit" id="submit" value="submit" onclick="submit_form()">
+       </div>
+       </div>
+     </form>
+      </div>
+    </div>
+
+
+
+  </section>
+<hr>
+</main>
+<hr>
+<footer class="footer">
+  <div class="footer-container container grid ">
+    <p>© 2022 Humaira Qadeer</p>
+  </div>
+</footer>
+<script src="../js/form-validate.js"></script>
+</body>
+
+</html>
