@@ -43,7 +43,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#contact">
-          <i class="uil uil-message nav-icon"></i> Contact Me
+          <i class="uil uil-message nav-icon"></i> Contact
         </a>
       </li>
     </ul>
@@ -66,10 +66,14 @@
   <section class="home section" id="home">
     <div class="home-container container grid">
       <div class="home-content grid">
+        <div class="home-caption">
+          <h1 class="home-title">Hi, I'm Humaira</h1>
+          <p class="home-description">Full Stack Engineer, Data Analyst, and Data Scientist </p>
+        </div>
         <div class="home-social">
           <a class="home-social-icon" href="https://www.linkedin.com/in/humairaqadeer" target="_blank">
             <i class="uil uil-linkedin"></i>
-          </a>
+          </a> 
           <a class="home-social-icon" href="https://github.com/humairaq" target="_black">
             <i class="uil uil-github"></i>
           </a>
@@ -80,14 +84,9 @@
 
 
 
-    <div class="home-caption">
-      <h1 class="home-title">Hi, I'm Humaira</h1>
-      <!-- add transitional sub-->
-      <p class="home-description">
-      </p>
-    </div>
       </div>
     </div>
+  </div>
 
 
   </section>
@@ -95,24 +94,95 @@
   <!--About -->
   <section class="about section" id="about">
     <h2 class="section-title"> About Me </h2>
-    <span class="section-subtitle">Allow Me to Introduce Myself</span>
-    <div class="about-container container grid">
-      <img id="about-img" src="images/studying.png"/>
 
-      <div class="about-desc">
-        <p class="p-about-desc">
-          I'm a Computer Science student, at Queens College.
-          I enjoy developing websites, machine learning, and working with data.
-        </p>
-        <br>
-        <div class="about-resume">
-          <h3>Take a look at my resume!</h3>
-          <a class="button" href="html/ResumeHumairaQadeer.html" target="_blank">
-            View Resume <!-- iclass-->
-          </a>
+    <input id="about-tab1" class="about-tabs" type="radio" name="about-tabs" checked>
+    <label for="about-tab1">About</label>
+
+    <input id="about-tab2" class="about-tabs" type="radio" name="about-tabs">
+    <label for="about-tab2">Education</label>
+
+<!--    <input id="about-tab3" class="about-tabs" type="radio" name="about-tabs">-->
+<!--    <label for="about-tab3">Skills</label>-->
+    <div id="Introduction" class="about-tab">
+      <div class="about-container container grid">
+        <img id="about-img" src="images/studying.png"/>
+
+        <div class="about-desc">
+          <p class="p-about-desc">
+            I'm currently pursuing a degree in Computer Science at Queens College.
+            I enjoy Software Development and Web Development, Machine Learning, Cloud Computing, Analyzing data, and Database Systems.
+          </p>
         </div>
       </div>
     </div>
+      <div id="Education" class="about-tab">
+        <div class="about-container container grid">
+
+            <div class="education-content">
+              <h3 class="education-title">City University of New York, Queens College</h3>
+            <span class="education-subtitle">- Bachelor's of Science in Computer Science</span>
+            </div>
+            <div class="education-date">
+              <h3 class="education-title">  <i class="uil uil-graduation-cap"></i><wbr> Expected Dec. 2022</h3>
+            </div>
+
+          </div>
+        <div class="certificate-break"><hr></div>
+        <div class="education-container container grid">
+
+          <div class="education-content">
+            <h3 class="education-title"><u>Microsoft Certified</u></h3>
+            <span class="education-subtitle">Azure Fundamentals</span>
+            <h3 class="education-subtitle">Issued Dec. 2021</h3>
+            <div class="cert">
+          <div  data-iframe-width="250" data-iframe-height="270"
+               data-share-badge-id="9f5ae675-1a61-4ca3-93f0-f95341b2d541"
+               data-share-badge-host="https://www.credly.com">
+          </div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script></div>
+        </div>
+
+
+
+
+          <div class="education-content">
+            <h3 class="education-title"><u>AWS Certified</u></h3>
+            <span class="education-subtitle">Cloud Practitioner</span>
+            <h3 class="education-subtitle">Issued Dec. 2021-Expires Dec. 2024</h3>
+            <div class="cert">
+               <div data-iframe-width="250" data-iframe-height="270"
+               data-share-badge-id="a0f87b7d-902d-40ac-8cf1-3bfe487a7b21"
+               data-share-badge-host="https://www.credly.com">
+
+               </div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+        </div>
+
+
+          <div class="education-content">
+            <h3 class="education-title"><u>McMurry University</u></h3>
+            <span class="education-subtitle">Introduction to Cybersecurity</span>
+            <h3 class="education-subtitle">Issued Aug. 2022</h3>
+            <div class="cert">
+          <div data-iframe-width="250" data-iframe-height="270"
+               data-share-badge-id="a72e83bf-aef8-4682-9deb-f5891b82934d"
+               data-share-badge-host="https://www.credly.com">
+
+          </div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script></div>
+          </div>
+        </div>
+
+
+
+      <div id="Skills" class="about-tab">
+
+
+          <br>
+
+      </div>
+
 
   </section>
 
@@ -120,55 +190,63 @@
   <!--Projects -->
   <section class="projects section" id="projects">
     <h2 class="section-title">Projects</h2>
-    <span class="section-subtitle"><i>(Click on the images for project descriptions)</i></span>
-    <div class="project-container container">
-      <div class="project-content grid">
+    <span class="section-subtitle"><i>(Toggle project images to view/hide descriptions)</i></span>
 
-        <div class="image-container" id="project-1" onclick="image_toggle('#project-1','#project-1-content')">
-          <img alt="NYC Travel Website" src="images/project-1.png"/>
-          <div class="image-header">
-            <h3 class="project-title">NYC Tourism Website <a
-                    href="https://humairaq.github.io/SWE-Project-1/" target="_blank">
-              <i class="uil uil-external-link-alt"></i></a></h3>
+    <input id="tab1" class="project-tabs" type="radio" name="project-tabs" checked>
+    <label for="tab1"><i class="uil uil-window"></i> &nbsp; SWE Bootcamp</label>
+
+    <input id="tab2" class="project-tabs" type="radio" name="project-tabs">
+    <label for="tab2"><i class="uil uil-robot"></i> &nbsp; Machine Learning</label>
+    
+    <div id="SWE-Bootcamp-Tab" class="tab">   
+      <div class="project-container container">
+        <div class="project-content grid">
+
+          <div class="image-container" id="project-1" onclick="image_toggle('#project-1','#project-1-content')">
+            <img alt="NYC Travel Website" src="images/project-1.png"/>
+            <div class="image-header">
+              <h3 class="project-title">NYC Tourism Website <a
+                      href="https://humairaq.github.io/SWE-Project-1/" target="_blank">
+                <i class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-1-content">
+              <p class="project-desc">NYC Tourism Website<br>Showcasing NYC attractions and booking
+                features.<br> <b>HTML | CSS |Javascript </b></p>
+
+            </div>
           </div>
-          <div class="image-content" id="project-1-content">
-            <p class="project-desc">NYC Tourism Website<br>Showcasing NYC attractions and booking
-              features.<br> <b>HTML | CSS |Javascript </b></p>
 
+          <div class="image-container" id="project-2" onclick="image_toggle('#project-2','#project-2-content')">
+            <img alt="Dream Diary" src="images/Midterm-Project.png"/>
+            <div class="image-header">
+              <h3 class="project-title">Dream Journal Website <a
+                      href="https://humairaq.github.io/SWE-Midterm-Project/" target="_blank"> <i
+                      class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-2-content">
+              <p class="project-desc">Dream Journaling Website <br>Features local storage functionality
+                using javascript to keep track of dreams on a daily basis.<br> <b>HTML | CSS |
+                  Javascript</b></p>
+
+            </div>
+          </div>
+
+          <div class="image-container" id="project-3" onclick="image_toggle('#project-3','#project-3-content')">
+            <img alt="Random Number Game" src="images/brython-game.png"/>
+            <div class="image-header">
+              <h3 class="project-title">Random Number Guessing Game <a
+                      href="https://brython-9popopop9.qcc2022edlc2w4.repl.co/" target="_blank"> <i
+                      class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-3-content">
+              <p class="project-desc">Online Game created with Brython <br> where a random number is generated
+                and player is given 7 chances to guess the number <br> <b>HTML | CSS | Brython </b></p>
+            </div>
           </div>
         </div>
-
-        <div class="image-container" id="project-2" onclick="image_toggle('#project-2','#project-2-content')">
-          <img alt="Dream Diary" src="images/Midterm-Project.png"/>
-          <div class="image-header">
-            <h3 class="project-title">Dream Journal Website <a
-                    href="https://humairaq.github.io/SWE-Midterm-Project/" target="_blank"> <i
-                    class="uil uil-external-link-alt"></i></a></h3>
-          </div>
-          <div class="image-content" id="project-2-content">
-            <p class="project-desc">Dream Journaling Website <br>Features local storage functionality
-              using javascript to keep track of dreams on a daily basis.<br> <b>HTML | CSS |
-                Javascript</b></p>
-
-          </div>
-        </div>
-
-        <div class="image-container" id="project-3" onclick="image_toggle('#project-3','#project-3-content')">
-          <img alt="Random Number Game" src="images/brython-game.png"/>
-          <div class="image-header">
-            <h3 class="project-title">Random Number Guessing Game <a
-                    href="https://brython-9popopop9.qcc2022edlc2w4.repl.co/" target="_blank"> <i
-                    class="uil uil-external-link-alt"></i></a></h3>
-          </div>
-          <div class="image-content" id="project-3-content">
-            <p class="project-desc">Online Game created with Brython <br> where a random number is generated
-              and player is given 7 chances to guess the number <br> <b>HTML | CSS | Brython </b></p>
-          </div>
-        </div>
-      </div>
-      <div class="more-projects grid">
+        <div class="more-projects grid">
         <div class="image-container" id="project-4"
-             onclick="image_toggle('#project-4','#project-4-content')">
+          onclick="image_toggle('#project-4','#project-4-content')">
           <img alt="Group Project" src="images/group-project.png"/>
           <div class="image-header">
             <h3 class="project-title">Group Project Website <a
@@ -180,99 +258,100 @@
               ambassadors, dropdown menus, login and registration, and contact form <br> <b> HTML |
                 CSS | Javascript</b></p>
           </div>
-        </div>
-
-        <div class="image-container" id="project-5"
-             onclick="image_toggle('#project-5','#project-5-content')">
-          <img alt="P5 Animation" src="images/p5-animation-img.png"/>
-          <div class="image-header">
-            <h3 class="project-title">P5 Animation PSA Website <a
-                    href="https://P5-Animation-9popopop9.qcc2022edlc2w4.repl.co" target="_blank"> <i
-                    class="uil uil-external-link-alt"></i></a></h3>
           </div>
-          <div class="image-content" id="project-5-content">
-            <p class="project-desc">Public Service Announcement <br> For severe weather conditions <b>
-              HTML | CSS | JS | AJAX </b></p>
-          </div>
-        </div>
-
-        <div class="image-container" id="project-6"
-             onclick="image_toggle('#project-6','#project-6-content')">
-          <img alt="Strawberry Milkshake" src="images/strawberry-milkshake-recipe.png"/>
-          <div class="image-header">
-            <h3 class="project-title">Strawberry Milkshake Recipe Website<a
-                    href="https://Learners-Make-a-Recipe-9popopop9.qcc2022edlc2w4.repl.co"
-                    target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
-          </div>
-          <div class="image-content" id="project-6-content">
-            <p class="project-desc"> Recipe Website <br> Features wireframe design to display recipe
-              using images, headings, paragraphs, unordered, and ordered lists <br> <b> HTML |
-                CSS </b>
-            </p>
-          </div>
-        </div>
-
-        <div class="image-container" id="project-7"
-             onclick="image_toggle('#project-7','#project-7-content')">
-          <img alt="Ajax Api" src="images/api-ajax.png"/>
-          <div class="image-header">
-            <h3 class="project-title">API, JSON, Ajax Practice Website <a
-                    href="https://Practice-API-Jason-Ajax-9popopop9.qcc2022edlc2w4.repl.co"
-                    target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
-          </div>
-          <div class="image-content" id="project-7-content">
-            <p class="project-desc">Features implementation of apis, fetching text files asynchronously,
-              and Ajax requests for JSON data <br> <b> HTML | CSS | AJAX | JSON | JS</b></p>
-          </div>
-        </div>
-
-        <div class="image-container" id="project-8"
-             onclick="image_toggle('#project-8','#project-8-content')">
-          <img alt="Jquery Traversal" src="images/jquery-traversal.png"/>
-          <div class="image-header">
-            <h3 class="project-title">JQuery Traversal <a
-                    href="https://jQuery-Traversing-9popopop9.qcc2022edlc2w4.repl.co" target="_blank">
-              <i class="uil uil-external-link-alt"></i></a></h3>
-          </div>
-          <div class="image-content" id="project-8-content">
-            <p class="project-desc">JQuery Traversal Website <br> Features use of JQuery to manipulate
-              CSS and implement several animations | HTML | CSS | JQuery
-            </p>
-          </div>
-        </div>
-
-        <div class="image-container" id="project-9"
-             onclick="image_toggle('#project-9','#project-9-content')">
-          <img alt="responsive web design" src="images/lab-13-css.png"/>
-          <div class="image-header">
-            <h3 class="project-title">Responsive Web Design - Simple <a
-                    href="https://lab13-9popopop9.qcc2022edlc2w4.repl.co/" target="_blank"> <i
-                    class="uil uil-external-link-alt"></i></a></h3>
-          </div>
-          <div class="image-content" id="project-9-content">
-            <p class="project-desc">6.Responsive Web Design implementation <br> Utilized media queries
-              to allow the browser to resize elements on webpages based on window size <br> <b> HTML |
-                CSS </b>
-            </p>
-          </div>
-        </div>
-
-        <div class="image-container" id="project-10"
-             onclick="image_toggle('#project-10','#project-10-content')">
-          <img alt="Responsive web form" src="images/Responsive-web-form.png"/>
-
-          <div class="image-header">
-            <h3 class="project-title">CSS Image Sprites and Forms <a
-                    href="https://Lab-14-CSS-Image-Sprites-and-Forms-9popopop9.qcc2022edlc2w4.repl.co"
-                    target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+     
+          <div class="image-container" id="project-5"
+              onclick="image_toggle('#project-5','#project-5-content')">
+            <img alt="P5 Animation" src="images/p5-animation-img.png"/>
+            <div class="image-header">
+              <h3 class="project-title">P5 Animation PSA Website <a
+                      href="https://P5-Animation-9popopop9.qcc2022edlc2w4.repl.co" target="_blank"> <i
+                      class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-5-content">
+              <p class="project-desc">Public Service Announcement <br> For severe weather conditions <b>
+                HTML | CSS | JS | AJAX </b></p>
+            </div>
           </div>
 
-          <div class="image-content" id="project-10-content">
-            <p class="project-desc">Implemented responsive form using CSS <br> Utilzing media queries
-              <br> <b> HTML | CSS </b>
-            </p>
+          <div class="image-container" id="project-6"
+              onclick="image_toggle('#project-6','#project-6-content')">
+            <img alt="Strawberry Milkshake" src="images/strawberry-milkshake-recipe.png"/>
+            <div class="image-header">
+              <h3 class="project-title">Strawberry Milkshake Recipe Website<a
+                      href="https://Learners-Make-a-Recipe-9popopop9.qcc2022edlc2w4.repl.co"
+                      target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-6-content">
+              <p class="project-desc"> Recipe Website <br> Features wireframe design to display recipe
+                using images, headings, paragraphs, unordered, and ordered lists <br> <b> HTML |
+                  CSS </b>
+              </p>
+            </div>
           </div>
-        </div>
+
+          <div class="image-container" id="project-7"
+              onclick="image_toggle('#project-7','#project-7-content')">
+            <img alt="Ajax Api" src="images/api-ajax.png"/>
+            <div class="image-header">
+              <h3 class="project-title">API, JSON, Ajax Practice Website <a
+                      href="https://Practice-API-Jason-Ajax-9popopop9.qcc2022edlc2w4.repl.co"
+                      target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-7-content">
+              <p class="project-desc">Features implementation of apis, fetching text files asynchronously,
+                and Ajax requests for JSON data <br> <b> HTML | CSS | AJAX | JSON | JS</b></p>
+            </div>
+          </div>
+
+          <div class="image-container" id="project-8"
+              onclick="image_toggle('#project-8','#project-8-content')">
+            <img alt="Jquery Traversal" src="images/jquery-traversal.png"/>
+            <div class="image-header">
+              <h3 class="project-title">JQuery Traversal <a
+                      href="https://jQuery-Traversing-9popopop9.qcc2022edlc2w4.repl.co" target="_blank">
+                <i class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-8-content">
+              <p class="project-desc">JQuery Traversal Website <br> Features use of JQuery to manipulate
+                CSS and implement several animations | HTML | CSS | JQuery
+              </p>
+            </div>
+          </div>
+
+          <div class="image-container" id="project-9"
+              onclick="image_toggle('#project-9','#project-9-content')">
+            <img alt="responsive web design" src="images/lab-13-css.png"/>
+            <div class="image-header">
+              <h3 class="project-title">Responsive Web Design - Simple <a
+                      href="https://lab13-9popopop9.qcc2022edlc2w4.repl.co/" target="_blank"> <i
+                      class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+            <div class="image-content" id="project-9-content">
+              <p class="project-desc">Responsive Web Design implementation <br> Utilized media queries
+                to allow the browser to resize elements on webpages based on window size <br> <b> HTML |
+                  CSS </b>
+              </p>
+            </div>
+          </div>
+
+          <div class="image-container" id="project-10"
+              onclick="image_toggle('#project-10','#project-10-content')">
+            <img alt="Responsive web form" src="images/Responsive-web-form.png"/>
+
+            <div class="image-header">
+              <h3 class="project-title">CSS Image Sprites and Forms <a
+                      href="https://Lab-14-CSS-Image-Sprites-and-Forms-9popopop9.qcc2022edlc2w4.repl.co"
+                      target="_blank"> <i class="uil uil-external-link-alt"></i></a></h3>
+            </div>
+
+            <div class="image-content" id="project-10-content">
+              <p class="project-desc">Implemented responsive form using CSS <br> Utilzing media queries
+                <br> <b> HTML | CSS </b>
+              </p>
+            </div>
+          </div>
+
       </div>
 
 
@@ -280,6 +359,44 @@
         <a class="button" id="see-more" onclick="see_more_projects()">view all</a>
       </div>
     </div>
+   </div>
+   <div id="Machine-Learning-Tab" class="tab">
+    <div class="project-container container">
+      <div class="project-content grid">
+        <div class="image-container" id="project-11"
+             onclick="image_toggle('#project-11','#project-11-content')">
+          <img alt="ML_Project_1" src="images/ML_Project_1.png"/>
+          <div class="image-header">
+            <h3 class="project-title">Supervised ML and Ensemble Learning <a
+                    href="html/ML_SP22_Project_1.html" target="_blank"><wbr><i
+                    class="uil uil-external-link-alt"></i>  </a><br> <a class="github" href="https://github.com/humairaq/Machine_Learning/tree/main/ML_Project_1"> <i class="uil uil-github"></i> view code</a></h3>
+          </div>
+          <div class="image-content" id="project-11-content">
+            <p class="project-desc">Supervised Machine Learning and Ensemble Learning <br> With Decision Tree Classifier and Random Forest Classifier on Breast Cancer Dataset <br> <b> Python |
+              Jupyter Notebook</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="image-container" id="project-12"
+             onclick="image_toggle('#project-12','#project-12-content')">
+          <img alt="ML_Project_2" src="images/ML_SP22_Project_2.png"/>
+          <div class="image-header">
+            <h3 class="project-title">Classical Machine Learning <a
+                    href="html/ML_SP22_Project_1.html" target="_blank"><wbr> <i
+                    class="uil uil-external-link-alt"></i> </a><br> <a class="github" href="https://github.com/humairaq/Machine_Learning/tree/main/ML_Project_1"> <i class="uil uil-github"></i> view code</a></h3>
+          </div>
+          <div class="image-content" id="project-12-content">
+            <p class="project-desc"> Logistic, Decision Tree, Random Forest Model Comparison <br> For Best Fitted Moded To Predict Wine Taste<br> on Wine Quality Dataset<b>Python |
+              Jupyter Notebook</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   </div>
+ 
 
   </section>
 
@@ -288,7 +405,7 @@
   <section class="contact section" id="contact">
     <h2 class="section-title">Contact Me</h2>
     <span class="section-subtitle">Lets chat!</span>
-    <div class="contact_container container grid">
+    <div class="contact-container container grid">
      <form id="contact-form" action="./" method="post" class="contact-form grid">
        <div class="contact-inputs grid">
          <div class="contact-content">
@@ -308,11 +425,11 @@
          </div>
          <div class="contact-content">
            <label for="contact-message" class="contact-label">Message</label>
-           <textarea class="contact-input" id="contact-message" row="07"> </textarea>
+           <textarea class="contact-input"  id="contact-message" row="07" aria-required> </textarea>
            <span class="help"> Please enter your message</span>
          </div>
          <div id="contact-content">
-           <input class="button" type="submit" value="submit"/>
+           <input class="submit-button"  type="submit" value="submit"/>
        </div>
        </div>
      </form>
@@ -323,38 +440,42 @@
 
 
   </section>
-<hr>
+
 </main>
 <hr>
 <footer class="footer">
   <div class="footer-container container grid ">
+    <ul class="footer-links">
+      <li>
+        <a class="footer-link" href="#home">Home</a>
+      </li>
+      <li>
+        <a class="footer-link" href="#about">About </a>
+      </li>
+      <li>
+        <a class="footer-link" href="#projects">Projects</a>
+      </li>
+      <li>
+        <a class="footer-link" href="#contact">Contact</a>
+      </li>
+      </ul>
+    <ul class="footer-links">
+      <li> <a class="footer-link"><i class="uil uil-github"></i>&nbsp;Github</a></li>
+      <li><a class="footer-link"><i class="uil uil-linkedin"></i>&nbsp;Linkedin</a></li>
+    </ul>
     <p>© 2022 Humaira Qadeer</p>
-  </div>
+</div>
 </footer>
 <script>
   const contactForm = new FormValidate(document.getElementById('contact-form'), false);
 
-  // custom validation - email and/or telephone
   const
           email = document.getElementById('email'),
           tel = document.getElementById('phone');
 
-  contactForm.addCustom(email, f => f.value || tel.value);
+  contactForm.addCustom(email, f => f.value || email.value);
   contactForm.addCustom(tel, f => f.value || email.value);
 
-  // custom submit
-  // contactForm.submit = e => {
-  //
-  //   e.preventDefault();
-  //
-  //   alert('Form is valid!\n(open the console)');
-  //
-  //   const fd = new FormData(e.target);
-  //   for (const [name, value] of fd.entries()) {
-  //     console.log(name + ': ' + value);
-  //   }
-  //
-  // }
 
   function logSubmit(event){
     log.textContent = `Form Submitted!`;
